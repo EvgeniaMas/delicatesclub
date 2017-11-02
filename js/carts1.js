@@ -6,7 +6,8 @@ class ProductCart {
       this.products = [];
      } 
     this.totalProductscalc();
-    this.addEventListeners();   
+    this.addEventListeners(); 
+
     }
   
 
@@ -20,6 +21,25 @@ class ProductCart {
       $('.products_quantity').text(allProducts);
     }
 
+
+  //   countClicks (buttonClicked) {
+  // //     // console.log(buttonClicked);
+  // //   // $(buttonClicked).data('counter', 0)
+  // //       // .click(function() {
+  // //       var counter = $(buttonClicked).data('counter'); 
+  // //       console.log(counter);   
+  // //       // $(buttonClicked).data('counter', counter + 1);       
+  // //       // return $(this).data('counter'); 
+  // //       // return counter;           
+  // //   // });
+
+  // $(buttonClicked).click(function() {
+  //   var counter = 1; 
+  //   counter++;
+  //   console.log(counter);
+  //    });
+  // }
+        
 
  addEventListeners() {
       let mi = this;
@@ -44,11 +64,55 @@ class ProductCart {
       let z = mi.checkDoubles(newProduct);
       mi.addProduct(newProduct, z);
          buttonClicked.innerHTML ="В корзине!";         
-         // console.log(product_quantity_block);
+         
          setTimeout(function(){buttonClicked.innerHTML ="Купить"}, 1500); 
-       });
+    
+      var counter = JSON.parse(sessionStorage.getItem('COUNTER'));
+      console.log(counter);
+      if(!counter) {
+        counter =1;
+      }
+      
+       if (counter==1) {        
+        counter++;
+        sessionStorage.setItem('COUNTER', JSON.stringify(counter));
+         $('#popup2').show();
+         $("#blindLayer").css("display","block");
+        }        
+       else if(counter>1 && counter <3) {
+        
+        window.location.href="cart.html";
+        counter++;
+        sessionStorage.setItem('COUNTER', JSON.stringify(counter));
+      }
+      else {
+        console.log(counter);
+      }
+      // console.log(clicks);
      
-     }
+      // console.log(clicks);
+      // clicks++;
+      // console.log(clicks);
+       
+        // let numOfClicks = 0; 
+                
+        //   ++numOfClicks;
+        //   console.log(numOfClicks); 
+        //   if(numOfClicks ==1) {
+        //   // $('#popup3').show();  
+        //   console.log('First');
+
+        //   }          
+        //   else if (numOfClicks > 1){
+        //     console.log('Even Click!');
+        //   }
+
+
+
+          });
+        }
+
+
  
 checkDoubles(newProduct, z) {
     let products = this.products;

@@ -6,6 +6,8 @@ class ProductCart {
       <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>'; 
      $('#clear_button').hide();
      $('.total_sum').hide(); 
+     $('#goTo_Form').hide(); 
+     
      } 
    
     this.loadProducts();
@@ -34,6 +36,7 @@ class ProductCart {
       <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>'; 
      $('#clear_button').hide();
      $('.total_sum').hide();  
+     $('#goTo_Form').hide();
      }
     });    
   }
@@ -47,7 +50,8 @@ class ProductCart {
       document.getElementById('cart').innerHTML = '<h3 class="empty_cart">Ваша корзина пуста!</h3> <br>\
       <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>';
      $('#clear_button').hide();
-     $('.total_sum').hide();  
+     $('.total_sum').hide(); 
+     $('#goTo_Form').hide(); 
      }
         
 
