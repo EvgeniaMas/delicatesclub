@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+  <html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>Купить рыбу, оленину в Рязани. Деликатес клаб 62.</title>  
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">    
+    <link rel="stylesheet" href="css/style.css">
+</head>    
+<body class="container-fluid grey_section">
+
+    <div class="header container-fluid">
+         <div class="container">
+              <div class="head">
+            <div class="col-lg-9">
+
+    <!-- NAV BAR -->
+          <nav class="navbar navbar-inverse">
+            <div class="container">
+              <!-- LOGO -->
+              <h1><a class="navbar-brand" href="#"><img class="logo" src="images/logo.png" alt="Логотип"></a></h1>
+              
+              <!-- MOBILE MENU -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+
+              <!-- DESKTOP MENU -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                  <li><a class="nav-link navbar__links" href="index.html#fish">Охлажденная<br>рыба</a></li>
+                  <li> <a class="nav-link navbar__links" href="index.html#sea_delicacy">Морские<br>деликатесы</a></li>
+                  <li><a class="nav-link navbar__links" href="index.html#deer_products">Продукция<br>из оленины</a></li>
+                  <li><a class="nav-link navbar__links" href="index.html#deliver">Доставка</a></li>
+                  <li><a class="nav-link navbar__links" href="index.html#opt">Оптовые<br>поставки</a></li>
+                  <!-- <li><a class="nav-link navbar__links" href="contacts.html">Контакты</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-lg-3">
+          <p class="first_screen__phone">+7(915) 616-88-68 </p>
+          <a href="cart.html">
+          <img class="cart_image" src="images/cart.png" alt="Корзина"/>
+          <p class="products_quantity"> </p>
+          </a>
+        </div>
+
+          </div>
+     </div> 
+</div> <!-- Конец первого экрана -->
+
+<div id="feedback-box">
+   <form id="feedback-form">
+     <div class="input-bloc w1">
+        <label for="name">ФИО</label>
+        <input type="text" size="25" name="name" id="name" required="" />
+      </div>
+    <div class="error-box"></div>     
+     <div class="input-bloc w1">
+        <label for="phone">Телефон</label>
+        <input size="25" type="tel" id="phone" name="phone"  required=""  />
+        <div class="error-box"></div> 
+     </div>
+      <div class="input-bloc w1">
+     <p class="address">Адрес доставки</p>
+     </div>
+     <div class="input-bloc w1">
+        <label for="email">Email:</label>
+        <input type="email" size="25" name="email" id="email"  required="" />
+        <div class="error-box"></div>
+     </div>
+     <div class="input-bloc w1">
+        <label for="city">Город/number пункт</label>
+        <input type="text" size="25" name="city" id="city"  required=""/>
+        <div class="error-box"></div> 
+     </div>
+     <div class="input-bloc w1">
+        <label for="region">Район города</label>
+        <input type="text" size="25" name="region" id="region"  required=""/>
+        <div class="error-box"></div> 
+     </div>
+     <div class="input-bloc w1">
+        <label for="house">Номер дома</label>
+        <input type="number" size="25" name="house" id="house" required=""/>
+        <div class="error-box"></div>
+     </div>
+     <div class="input-bloc w1">
+        <label for="subnumber">Корпус</label>
+        <input type="number" size="25" name="subnumber" id="subnumber"/>
+        <div class="error-box"></div> 
+     </div>
+     <div class="input-bloc w1">
+        <label for="entrance_number">Подъезд</label>
+        <input type="number" size="25" name="entrance_number" id="entrance_number" required=""/>
+        <div class="error-box"></div> 
+     </div>
+     <div class="input-bloc w1">
+        <label for="entrance_code">Код на подъезде</label>
+        <input type="number" size="25" name="entrance_code" id="entrance_code"/>
+        <div class="error-box"></div>
+     </div>     
+     <div class="input-bloc w1">
+        <label for="flat_number">Номер квартиры или офиса</label>
+        <input type="number" size="25" name="flat_number" id="flat_number" required=""/>
+        <div class="error-box"></div>
+     </div>       
+ 
+  <div class="container-fluid button_send">
+        <div class="container">
+            <div class="col-md-12">
+            <a href="thanks.html" type="submit" id="send"  class="button red_button popup_button">ОТПРАВИТЬ </a>
+            </div>
+        </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    
+  
+  document.getElementById('send').addEventListener('click', function(e){
+    e.preventDefault();
+    var a = document.getElementsByTagName('input');
+    for (let b=0; b<a.length; b++) {
+      if (a[b].innerHTML == "") {
+       window.location.href="thanks.html";
+      }
+      }
+    
+    
+})   
+    
+
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/carts1.js"  type="text/javascript" ></script>
+ 
+ </body>
+</html>
+
+
+
