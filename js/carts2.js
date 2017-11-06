@@ -6,56 +6,72 @@ class ProductCart {
       <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>'; 
      $('#clear_button').hide();
      $('.total_sum').hide(); 
-     $('#goTo_Form').hide(); 
-     
-     } 
-   
+     $('#goTo_Form').hide();      
+     }    
     this.loadProducts();
+    this.changeQuantity();
     this.totalPricecalc();
     this.deleteCart();   
     }
 
-
-
   loadProducts() {
-
     let productsHtml = this.products.reduce((html, product, index) => html +=  
     this.generateProductHtml(product, index), '');
-    document.getElementById('cart').innerHTML = productsHtml;   
+    document.getElementById('cart').innerHTML = productsHtml;
+    if(this.products.length ==0) {
+      document.getElementById('cart').innerHTML = '<h3 class="empty_cart">Ваша корзина пуста!</h3> <br>\
+      <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>';
+     $('#clear_button').hide();
+     $('.total_sum').hide(); 
+     $('#goTo_Form').hide(); 
+     }       
+     
   }
+
+    deleteProduct(index) { 
+     let mi= this;
+     this.products.splice(index, 1);     
+     localStorage.setItem('PRODUCTS', JSON.stringify(this.products));     
+      window.location.href="cart.html";
+      this.loadProducts();
+      // console.log(this.products);
+         
+  }
+
+  changeQuantity(){
+$(document).ready(function() {
+      $(this).find('.less_goods').click(function () {
+        var $input = $(this).parent().find('input[name="product_quantity"]');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $(this).find('.more_goods').click(function () {
+        var $input = $(this).parent().find('input[name="product_quantity"]');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+    
+  }
+
+
 
   deleteCart() {
     let mi =this;
     $('#clear_button').click(function(e){      
     this.products = [];
     localStorage.clear();
-    console.log(this.products); 
     mi.loadProducts();
-      if(this.products.length ==0) {
-      document.getElementById('cart').innerHTML = '<h3 class="empty_cart">Ваша корзина пуста!</h3> <br>\
-      <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>'; 
-     $('#clear_button').hide();
-     $('.total_sum').hide();  
-     $('#goTo_Form').hide();
-     }
+    window.location.href="cart.html";
+    
     });    
   }
 
-    deleteProduct(index) { 
-     let mi= this;
-     this.products.splice(index, 1);
-      this.loadProducts();
-     localStorage.setItem('PRODUCTS', JSON.stringify(this.products));
-         if(this.products.length ==0) {
-      document.getElementById('cart').innerHTML = '<h3 class="empty_cart">Ваша корзина пуста!</h3> <br>\
-      <a class="back_to_shop_link" href="index.html">Вернуться в магазин </a>';
-     $('#clear_button').hide();
-     $('.total_sum').hide(); 
-     $('#goTo_Form').hide(); 
-     }
-        
 
-  }
 
   totalPricecalc() {
   let total_sum_blocks = $('.total_price');
@@ -112,8 +128,8 @@ updateCart(a, currentQuantity){
         <p class="product_title"> ${this.products[index].product_title} </p>
          <p class="product_title"> за 1000 г </p>         
          </div>
-         <div class="col-md-3 cart_structure">
-         <img class="product_in_cart" src= ${this.products[index].product_image} alt="Выбранный товар"/>
+         <div class="col-sm-12 col-md-3 cart_structure">
+         <img class="product_in_cart image_product" src= ${this.products[index].product_image} alt="Выбранный товар"/>
          </div>
          <div class="col-md-2 cart_structure">
          
