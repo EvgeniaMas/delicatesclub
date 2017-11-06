@@ -158,7 +158,7 @@ form {
                 <ul class="nav navbar-nav navbar-left">
                   <li><a class="nav-link navbar__links" href="index.html#fish">Охлажденная<br>рыба</a></li>
                   <li> <a class="nav-link navbar__links" href="index.html#sea_delicacy">Морские<br>деликатесы</a></li>
-                  <li><a class="nav-link navbar__links" href="index.html#deer_product">Продукция<br>из оленины</a></li>
+                  <li><a class="nav-link navbar__links" href="index.html#deer_products">Продукция<br>из оленины</a></li>
                   <li><a class="nav-link navbar__links" href="index.html#deliver">Доставка</a></li>
                   <li><a class="nav-link navbar__links" href="index.html#opt">Оптовые<br>поставки</a></li>
                   <!-- <li><a class="nav-link navbar__links" href="contacts.html">Контакты</a></li> -->
@@ -188,7 +188,7 @@ form {
     <div class="error-box"></div>     
      <div class="input-bloc w1">
         <label for="phone">Телефон</label>
-        <input type="text" size="25" name="phone" id="phone" required=""  />
+        <input type="text" size="25" placeholder="+7-921-111-1111" pattern="\+\d-\d{3}-\d{3}-\d{4}" id="phone" name="phone"   required=""  />
         <div class="error-box"></div> 
      </div>
       <div class="input-bloc w1">
@@ -211,27 +211,27 @@ form {
      </div>
      <div class="input-bloc w1">
         <label for="house">Номер дома</label>
-        <input type="text" size="25" name="house" id="house" required=""/>
+        <input type="text" size="25" name="house" id="house" type="house" required=""/>
         <div class="error-box"></div>
      </div>
      <div class="input-bloc w1">
         <label for="subnumber">Корпус</label>
-        <input type="text" size="25" name="subnumber" id="subnumber" required=""/>
+        <input type="text" size="25" name="subnumber" type="number" id="subnumber"/>
         <div class="error-box"></div> 
      </div>
      <div class="input-bloc w1">
         <label for="entrance_number">Подъезд</label>
-        <input type="text" size="25" name="entrance_number" id="entrance_number" required=""/>
+        <input type="text" size="25" name="entrance_number" type="number" id="entrance_number" required=""/>
         <div class="error-box"></div> 
      </div>
      <div class="input-bloc w1">
         <label for="entrance_code">Код на подъезде</label>
-        <input type="text" size="25" name="entrance_code" id="entrance_code" required=""/>
+        <input type="text" size="25" name="entrance_code" type="number" id="entrance_code"/>
         <div class="error-box"></div>
      </div>     
      <div class="input-bloc w1">
         <label for="flat_number">Номер квартиры или офиса</label>
-        <input type="text" size="25" name="flat_number" id="flat_number" required=""/>
+        <input type="text" size="25" name="flat_number" type="number" id="flat_number" required=""/>
         <div class="error-box"></div>
      </div>       
 </div> 
@@ -247,16 +247,17 @@ form {
 
 <script type="text/javascript">
   document.addEventListener('submit', function(e) {
-var a =document.getElementsByTagName('input');
-console.log(a);
-for (let b =0; b<a.length; b++) {
-  if (a[b].innerHTML = "") {
-    console.log("FFFFFFFFFFFFFFFFFF");
-  }
-  else {
-     window.location.href="thanks.html";
-  }
-}
+    alert('VAU!');
+// var a =document.getElementsByTagName('input');
+// console.log(a);
+// for (let b =0; b<a.length; b++) {
+//   if (a[b].innerHTML = "") {
+//     console.log("FFFFFFFFFFFFFFFFFF");
+//   }
+//   else {
+//      window.location.href="thanks.html";
+//   }
+// }
 
   })
 
