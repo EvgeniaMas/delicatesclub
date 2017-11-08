@@ -284,7 +284,8 @@ input.goods_amount{
 	top: 400px;
 	right: 5px;  
 	background-color: #fff;
-	color: #000;  
+	color: #000; 
+	z-index: 500; 
 }
 .minus {
     padding: 20px;
@@ -1143,8 +1144,8 @@ text-align: center;
 
 }
 
-span.less_goods,
-span.more_goods{
+span.less_goods2,
+span.more_goods2{
 	
 	display: block;
 	width: 100%;
@@ -1182,29 +1183,51 @@ span.more_goods{
 }
 
 
-// #phonenumber {
-//     padding: 7px 10px;
-//     outline: none;
-//     color: #000;
-//     width: 260px;   
-//     border-radius: 3px;
-//     -webkit-border-radius: 3px;
-//     -moz-border-radius: 3px;
-//     height: 30px;
-//     margin-left: 10px;
+#phonenumber {
+    padding: 7px 10px;
+    outline: none;
+    color: #000;
+    width: 260px;   
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    height: 30px;
+    margin-left: 10px;
 
-// }
+}
 
 
-// #mail {
-//     padding: 7px 10px;
-//     outline: none;
-//     color: #000;
-//     width: 260px;   
-//     border-radius: 3px;
-//     -webkit-border-radius: 3px;
-//     -moz-border-radius: 3px;
-//     height: 30px;
-//     margin-left: 10px;
+#mail {
+    padding: 7px 10px;
+    margin-bottom: 20px;
+    outline: none;
+    color: #000;
+    width: 260px;   
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    height: 30px;
+    margin-left: 10px;
 
-// }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+.card_background {
+    left: 0%;
+    min-height: 432px;
+    padding: 36px 10px 18px;
+    position: relative;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.89);
+    -webkit-box-shadow: 0.669131px 0.743145px 2.94px 0.06px rgba(28, 28, 28, 0.53);
+    -moz-box-shadow: 0.669131px 0.743145px 2.94px 0.06px rgba(28, 28, 28, 0.53);
+    box-shadow: 0.669131px 0.743145px 2.94px 0.06px rgba(28, 28, 28, 0.53);
+    margin:auto;
+
+}
+.good_title {
+    font-size: 1rem;
+}
+
+}

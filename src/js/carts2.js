@@ -133,10 +133,10 @@ updateCart(a, currentQuantity){
          </div>
          <div class="col-md-2 cart_structure">
          
-         <span class="more_goods pluses2 table_quantity">+</span>
+         <span class="more_goods more_goods2 pluses2 table_quantity">+</span>
          <input class="products_in_cart table_quantity" name="product_quantity" min="1" value=${Number(this.products[index].product_quantity)} type="number"
          onchange="cart.calculate_price(${index})">
-         <span class="less_goods minus2 table_quantity">-</span>
+         <span class="less_goods less_goods2 minus2 table_quantity">-</span>
          <span class="table_product_id hidden">${this.products[index].product_id}</span>
          </div>
          <div class="col-md-2 cart_structure ">
