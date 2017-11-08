@@ -129,7 +129,7 @@ p.first_screen__phone {
 }
 
 .grey_section {
- background-color: #212121;
+ background-color: rgba(0, 0, 0, 0.87);
  min-height: 159px;
  
 }
@@ -145,7 +145,7 @@ h1.main_activity {
 	
 	min-height: 120px;
 	padding: 40px 40px;
-	background-color: #212121;
+	background-color: rgba(0, 0, 0, 0.87);
 	color:#fff;	
 	font-size: 2rem;
 	margin-top: 120px;
@@ -166,6 +166,8 @@ padding-top: 50%;
 .delete_product {
 	 background: #ce3331;
 	 color: #fff;
+	 display: inline-block;
+	 margin: 10px;
 }
 
 .delete_product:hover {
@@ -201,7 +203,7 @@ padding-top: 50%;
      width: 267px;
     border: none;
     border: 0 none;
-   background-color: #212121;
+   background-color: rgba(0, 0, 0, 0.87);
     -webkit-box-shadow: 0.669131px 0.743145px 2.94px 0.06px #000000;
     -moz-box-shadow: 0.669131px 0.743145px 2.94px 0.06px #000000;
     box-shadow: 0.669131px 0.743145px 2.94px 0.06px #000000;
@@ -447,7 +449,7 @@ span.minus::-moz-focus-inner {
 
 
 .nav_bottom {
-	background-color: #212121!important;
+	background-color: rgba(0, 0, 0, 0.87)!important;
 	text-align: center!important;
 	overflow-x: hidden;
 }
@@ -541,7 +543,7 @@ button::-moz-focus-inner,
 
 .header-social {
 	
-	 background-color: #212121;
+	 background-color: rgba(0, 0, 0, 0.87);
 	 margin-top: 120px;
 	
 }
@@ -561,10 +563,11 @@ button::-moz-focus-inner,
 
 
 .info {
-	background-color: #212121;
+	background-color: rgba(0, 0, 0, 0.87);
 	padding: 80px 40px;
 	color: #fff;
 	margin-top: 20px;
+	line-height: 20px;
 }
 
 
@@ -670,7 +673,7 @@ button::-moz-focus-inner,
 	}
 	.popup input[type="text"]{
 		text-align: center;
-		background-color: #212121;
+		background-color: rgba(0, 0, 0, 0.87);
 		display: block;
 		width: 100%;
 		margin-bottom: 20px;
@@ -773,7 +776,7 @@ width: 100%;
 }
 
 .grey_layer {
-	background-color: #212121;
+	background-color: rgba(0, 0, 0, 0.87);
 	height: 100vh;
 	width: 100vw;
 	opacity: 0.9;
@@ -844,15 +847,23 @@ width: 100%;
   .good {
   	margin:auto;
   }
-
+form#feedback-form {
+    margin-top: 130px;
+}
 @media (max-width: 1200px) {
 
 .good {
 	margin:auto;
 	
 }
+
+form#feedback-form {
+    margin-top: 260px;
+}
+
+
   .header-social{
-  	margin-top: 230px;
+  	margin-top: 250px;
   	float: right;
   	width: 400px;
   	text-align: center;  	
@@ -971,11 +982,7 @@ width: 100%;
 
 }
 
-label {
-  font-size: 14px;
-  color: #fff;
 
-}
 
 
 .make_order__title {
@@ -999,9 +1006,7 @@ background-color: #fff;
     margin-top: 30px;
 }
 
-form#feedback-form {
-    margin-top: 130px;
-}
+
 
 .address {
    	color: #fff;
@@ -1042,13 +1047,22 @@ form#feedback-form {
   a#price_list {
   	margin-top: 20px;
   }
+  label {
+  	display: block;
+		
+		padding-top: 10px;
+		padding-bottom: 10px;
+		
+		color: #fff!important;
+	}
 
-  .header-social{
-  	margin-top: 200px;
-  	background-color: #212121;
-  	height: 80px;
-  	line-height: 80px;
-  }
+ #feedback-form .w1 label{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+}
+  
 
   .navbar__links {
   	text-align: center;
@@ -1073,24 +1087,124 @@ form#feedback-form {
   }
    
   }
+label {
+  font-size: 14px;
+  color: #fff;
+
+}
 
 @media (max-width: 500px) {
 .card_background {
 	margin:auto;
 	margin-left: -160px;
 
+
 }
+
+.goods_parts__icon {
+	max-height: 52px;
+}
+
+.header-social {
+    margin-top: 190px;
+    width: 320px;
+    
+}
+
+.logo {
+	max-width: 130px;
+}
+
 .goods_parts__title {
 	font-size: 20px;
 	margin-top: 18px;
 	margin-bottom: 18px;
 
 }
+p.info {
+	padding: 40px 30px;
+}
 section {
 	padding-left: 10px;
 }
+
+
+
+}
+
+@media screen and (min-width: 991px) and (max-width: 1200px) { 
+   
+
+.products_in_cart {
+ display: block;
+ max-width: 100%;
+ margin-right: 0;
+text-align: center;
+
+}
+
+span.less_goods,
+span.more_goods{
+	
+	display: block;
+	width: 100%;
+	text-align: center;
+	
+
+}
+}
+
+@media (max-width: 992px) { 
+.nav > li {
+	display: block;
+	width: 100%;	
+	float: right;
+	text-align: center;
+	
+	
+}
+.nav > li>a {
+	display: block;
+	width: 100%;
+	text-align: center;
+	
+	
+	
+}
+.nav > li>a:hover {
+	display: block;
+	max-width: 200px;
+	text-align: center;
+	
+	
+	
+}
 }
 
 
+// #phonenumber {
+//     padding: 7px 10px;
+//     outline: none;
+//     color: #000;
+//     width: 260px;   
+//     border-radius: 3px;
+//     -webkit-border-radius: 3px;
+//     -moz-border-radius: 3px;
+//     height: 30px;
+//     margin-left: 10px;
+
+// }
 
 
+// #mail {
+//     padding: 7px 10px;
+//     outline: none;
+//     color: #000;
+//     width: 260px;   
+//     border-radius: 3px;
+//     -webkit-border-radius: 3px;
+//     -moz-border-radius: 3px;
+//     height: 30px;
+//     margin-left: 10px;
+
+// }

@@ -32,7 +32,7 @@
 
               <!-- DESKTOP MENU -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
+                <ul class="nav navbar-nav ">
                   <li><a class="nav-link navbar__links" href="#fish">Охлажденная<br>рыба</a></li>
                   <li> <a class="nav-link navbar__links" href="#sea_delicacy">Морские<br>деликатесы</a></li>
                   <li><a class="nav-link navbar__links" href="#deer_products">Продукция<br>из оленины</a></li>
@@ -83,7 +83,7 @@
 <div id="blindLayer" class="container-fluid"></div>
 
 	<!--products-->
-<section>	
+<section class="container-fluid">	
     <div id="fish" class="container-fluid grey_section goods_parts">
          <img class="goods_parts__icon" src="images/icon_goods_sections.png" alt="Иконка">
          <p class="goods_parts__title">Наши Товары:</p>
@@ -497,7 +497,7 @@
       </div>
     </div>
 </section>
-<section> 
+<section class="container-fluid"> 
 	<div id="deer_products" class="container-fluid grey_section goods_parts">
          <img class="goods_parts__icon" src="images/icon_goods_sections.png" alt="Иконка">
          <p class="goods_parts__title">Наши Товары:</p>
@@ -866,7 +866,7 @@
       </div> 
    </div>   
 </section>
-<section>
+<section class="container-fluid">
 
 <div id="sea_delicacy" class="container-fluid grey_section goods_parts">
          <img class="goods_parts__icon" src="images/icon_goods_sections.png" alt="Иконка">
@@ -1024,28 +1024,11 @@
   <a href="javascript:PopUpHide()">
   <p  class="close1" style="float:right"></p> </a>
   <form id="back_call_popup" method="POST" action="send.php">
-    <input id="mail" type="text" placeholder="введите Ваш e-mail"  required="" /> <br>
-    <input id="phonenumber" type="text" placeholder="введите Ваш телефон" required=""/>
+    <input id="mail" type="email" placeholder="введите Ваш e-mail"  required="" /> <br>
+    <input id="phonenumber" type="tel" placeholder="введите Ваш телефон" required=""/>
     <a href="thanks.html" class="btn grey_button">Отправить</a> 
   </form>
 </div>
-
-<!--Попап корзины -->
-
-<!-- <div id="popup2" class= "popup" >
-<a href="javascript:PopUpHide2()">
-<p style="float:right">Закрыть окно</p> </a>
-<h4>Пожалуйста, введите Вашие данные</h4>
-<form>
-<input id="user_name" type="text" placeholder="Ваши фамилия и имя"  class="" />
-<input id="user_phonephone" type="text" placeholder="Контактный телефон" class="text-input"/>
-<input id="user_email" type="text" placeholder="Электронная почта" class="" />
-<br>
-<textarea id="user_adress" placeholder="Адрес"></textarea>
-<textarea id="user_message" placeholder="Ваше сообщение"></textarea>
-</form>
-<button  class="form_button" onclick="cart.sendOrder('formToSend,overflw,bsum');">Отправить</button>
-</div> -->
 
 <div id="popup2" class= "popup"> 
     <form>
