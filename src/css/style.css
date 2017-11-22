@@ -1032,9 +1032,12 @@ div.cart_content {
         display: none
     }
     h1.main_activity {
-        margin-top: 20px;
+        margin-top: -120px;
         font-size: 1.5rem
     }
+    .first_screen {
+   	min-height: 700px;
+   }
     
     .red_button,
     .grey_button{
@@ -1210,8 +1213,7 @@ p.info {
     .minus {
         padding-top: 35px;
         font-size: 20px
-    }
-
+    }   
 }
 
 .header-social {
@@ -1259,7 +1261,8 @@ p.info {
         max-width: 150px;
     }
     h1.main_activity {
-    margin-top: 20px;
+    
     font-size: 1rem;
 }
+
 }
