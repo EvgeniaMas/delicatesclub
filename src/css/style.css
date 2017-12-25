@@ -748,10 +748,11 @@ button::-moz-focus-inner,
 .close1,
 .close2,
 .close3 {
-    background: url('../images/close.png') no-repeat 0px 0px;
+    // background: url('../images/close.png') no-repeat 0px 0px;
+    // background-color: green;
     cursor: pointer;
-    width: 28px;
-    height: 28px;
+    font-size: 20px;
+    font-weight: 700;
     position: absolute;
     right: 5px;
     top: 10px;
